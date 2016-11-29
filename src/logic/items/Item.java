@@ -1,4 +1,4 @@
-package logic;
+package logic.items;
 
 /**
  * Created by npotocka on 28.11.16.

@@ -1,9 +1,11 @@
-package logic;
+package logic.items.use;
+
+import logic.heros.Hero;
 
 /**
  * Created by npotocka on 28.11.16.
  */
-public class HealthPotion extends Potion{
+public class HealthPotion extends Potion implements Usable{
     @Override
     public String getItemName() {
         return "Potion of Health";

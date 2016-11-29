@@ -1,7 +1,10 @@
-package logic;
+package logic.heros;
+
+import logic.items.Item;
+import logic.items.equipment.Equippable;
+import logic.items.use.Usable;
 
 import java.util.ArrayList;
-import java.util.Set;
 
 /**
  * Created by npotocka on 28.11.16.

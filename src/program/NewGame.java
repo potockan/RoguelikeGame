@@ -1,11 +1,9 @@
 package program;
 
-import logic.HealthPotion;
-import logic.Hero;
-import logic.LevelPotion;
-import logic.Item;
-
-import java.util.ArrayList;
+import logic.items.use.HealthPotion;
+import logic.heros.Hero;
+import logic.items.use.LevelPotion;
+import logic.items.Item;
 
 /**
  * Created by npotocka on 28.11.16.
@@ -18,7 +16,8 @@ public class NewGame {
         hero1.displayHero();
         hero1.addInventory(new HealthPotion());
         hero1.displayHero();
-        ArrayList<Item> inv= hero1.getInventory();
-        //hero1.getInventory()[0].use(hero1);
+        Item it1 = hero1.getInventory().get(0);
+        System.out.println(it1);
+        //it1.use(hero1); // nie dziala, bo it1 typu Item!
     }
 }
