@@ -67,8 +67,14 @@ public class Hero {
         eq.equip(this);
     }
 
-    // da sie tu zaimplementowac toString? Podkreslal mi, jak robilam
-    // "level:" + this.level + ... (bez inventory)
+    @Override
+    public String toString() {
+        return "Level: " + this.level +
+                ", Health: " + this.health +
+                ", Armor: " + this.armor;
+        // jak dodac inventory?
+    }
+
     public void displayHero() {
         System.out.format("Level: %s, Health: %s, Armor: %s, Inventory: ",
                 this.level, this.health, this.armor);
