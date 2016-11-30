@@ -5,6 +5,7 @@ import logic.items.equipment.Equippable;
 import logic.items.use.Usable;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by npotocka on 28.11.16.
@@ -69,10 +70,21 @@ public class Hero {
 
     @Override
     public String toString() {
+        /*String strOut = "";
+        for(Item item: inventory)
+            strOut += item + ", ";*/
+        // more effective way:
+        //String inventoryOutput = Arrays.toString(inventory.toArray());
+        // the most effective way:
+        StringBuilder builder = new StringBuilder();
+        for(Item item: inventory){
+            builder.append(item);
+            builder.append(", ");
+        }
         return "Level: " + this.level +
                 ", Health: " + this.health +
-                ", Armor: " + this.armor;
-        // jak dodac inventory?
+                ", Armor: " + this.armor +
+                ", Inventory: " + builder.toString();
     }
 
     public void displayHero() {

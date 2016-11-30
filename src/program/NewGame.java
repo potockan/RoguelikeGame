@@ -20,6 +20,7 @@ public class NewGame {
         hero1.useItem(hero1.getInventory().get(0));
         hero1.displayHero();
         hero1.addInventory(new LeatherArmor());
+        System.out.println(hero1);
         hero1.displayHero();
         hero1.useItem(hero1.getInventory().get(1));
         hero1.displayHero();
