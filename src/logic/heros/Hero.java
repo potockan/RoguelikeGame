@@ -55,6 +55,7 @@ public class Hero {
     }
 
     public void addInventory(Item newItem){
+        System.out.format("Adding %s to inventory\n", newItem.getItemName());
         this.inventory.add(newItem);
     }
 
@@ -74,6 +75,17 @@ public class Hero {
         for(Item item: inventory)
             System.out.format("%s, ", item);
         System.out.println();
+    }
 
+    public void useItem(Item item){
+        if(item instanceof Usable){
+            ((Usable) item).use(this);
+            this.inventory.remove(item);
+        }else{
+            if(item instanceof Equippable){
+                ((Equippable) item).equip(this);
+                this.inventory.remove(item);
+            }
+        }
     }
 }

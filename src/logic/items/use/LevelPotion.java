@@ -13,6 +13,7 @@ public class LevelPotion extends Potion implements Usable{
 
     @Override
     public void use(Hero hero) {
+        System.out.format("Using %s\n", this.getItemName());
         hero.setLevel(hero.getLevel() + 1);
     }
 }

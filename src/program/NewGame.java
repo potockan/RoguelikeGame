@@ -1,5 +1,6 @@
 package program;
 
+import logic.items.equipment.LeatherArmor;
 import logic.items.use.HealthPotion;
 import logic.heros.Hero;
 import logic.items.use.LevelPotion;
@@ -16,8 +17,13 @@ public class NewGame {
         hero1.displayHero();
         hero1.addInventory(new HealthPotion());
         hero1.displayHero();
-        Item it1 = hero1.getInventory().get(0);
-        System.out.println(it1);
-        //it1.use(hero1); // nie dziala, bo it1 typu Item!
+        hero1.useItem(hero1.getInventory().get(0));
+        hero1.displayHero();
+        hero1.addInventory(new LeatherArmor());
+        hero1.displayHero();
+        hero1.useItem(hero1.getInventory().get(1));
+        hero1.displayHero();
+        hero1.useItem(hero1.getInventory().get(0));
+        hero1.displayHero();
     }
 }

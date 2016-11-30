@@ -14,6 +14,7 @@ public class LeatherArmor extends Armor implements Equippable{
 
     @Override
     public void equip(Hero hero) {
+        System.out.format("Using %s\n", this.getItemName());
         hero.setArmor(hero.getArmor() + 10);
     }
 }

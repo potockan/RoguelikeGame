@@ -13,6 +13,7 @@ public class HealthPotion extends Potion implements Usable{
 
     @Override
     public void use(Hero hero) {
+        System.out.format("Using %s\n", this.getItemName());
         hero.setHealth(hero.getHealth() + 10);
     }
 }
