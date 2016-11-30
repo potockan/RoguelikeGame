@@ -1,4 +1,4 @@
-package logic.items.use;
+package logic.items.equipment;
 
 import logic.items.Item;
 import logic.items.equipment.Equippable;

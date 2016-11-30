@@ -1,7 +1,6 @@
 package logic.items.equipment;
 
 import logic.heros.Hero;
-import logic.items.use.Armor;
 
 /**
  * Created by npotocka on 28.11.16.
